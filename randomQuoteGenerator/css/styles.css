@@ -54,6 +54,15 @@ body {
   content: "—";
 }
 
+.character {
+  font-style: italic;
+}
+
+.character:before {
+  content: ", ";
+  font-style: normal;
+}
+
 .citation {
   font-style: italic;
 }
@@ -64,6 +73,11 @@ body {
 }
 
 .year:before {
+  content: ", ";
+  font-style: normal;
+}
+
+.tag:before {
   content: ", ";
   font-style: normal;
 }
