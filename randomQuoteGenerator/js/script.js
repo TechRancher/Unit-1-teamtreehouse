@@ -1,6 +1,12 @@
 // FSJS - Random Quote Generator
 
 // Create the array of quote objects and name it quotes
+
+/* 
+This is a random quote generator that will display quotes to the index.html file. The program also will display the source, Character, Citation, Year and Tag if the quote provided this info. The program will also change the backgound color and will refresh after 30 seconds. 
+*/
+
+// The object array which holds the quotes to be randomly used in this program.
 let quotes = [
   {
     quote: "Learn to enjoy every minute of your life. Be happy now. Don't wait for something outside of yourself to make you happy in the future. Think how really precious is the time you have to spend, whether it's at work or with your family. Every minute should be enjoyed and savored.",
@@ -73,15 +79,14 @@ let quotes = [
   }
 ]
 
-let quoteArray = [];
-let message = "";
-
 
 // Create the getRandomQuote function and name it getRandomQuote
+// This function returns a random quote to be used to be displayed
 function getRandomQuote(array) {
   return array[Math.floor(Math.random()*quotes.length)];
 }
 
+// This function is used to make a random background color including the button background color.
 function getRandomBackgroundColor() {
   let x = Math.floor(Math.random()* 256);
   let y = Math.floor(Math.random()* 256);
@@ -93,6 +98,9 @@ function getRandomBackgroundColor() {
 
 
 // Create the printQuote funtion and name it printQuote
+/* 
+This function is used to take the random quote from getRandomQuote function and through the use of conditional statments, display the appropriate information to the index.html file.
+*/
 function printQuote() {
   getRandomBackgroundColor();
   let displayQuote = getRandomQuote(quotes);
