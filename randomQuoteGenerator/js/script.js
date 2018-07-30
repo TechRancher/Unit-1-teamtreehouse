@@ -15,7 +15,7 @@ const quotes = [
   },
   {
     quote: "Whatever we plant in our subconscious mind and nourish with repetition and emotion will one day become reality.",
-    source: "Earl Nightingale", 
+    source: "Earl Nightingale",
     tag: "Perception"
   },
   {
@@ -91,14 +91,14 @@ function runTimer() {
 // Create the getRandomQuote function and name it getRandomQuote
 // This function returns a random quote to be used to be displayed
 function getRandomQuote(array) {
-  return array[Math.floor(Math.random()*quotes.length)];
+  return array[Math.floor(Math.random() * quotes.length)];
 }
 
 // This function is used to make a random background color including the button background color.
 function getRandomBackgroundColor() {
-  let x = Math.floor(Math.random()* 256);
-  let y = Math.floor(Math.random()* 256);
-  let z = Math.floor(Math.random()* 256);
+  let x = Math.floor(Math.random() * 256);
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 190);
   let bgColor = "rgb(" + x + "," + y + "," + z + ")";
   document.getElementById("loadQuote").style.backgroundColor = bgColor;
   document.body.style.backgroundColor = bgColor;
@@ -120,14 +120,14 @@ function printQuote() {
   }
   if ("citation" in displayQuote) {
     arrayDisplay += "<span class='citation'>Citation: " + displayQuote.citation + "</span>";
-  } 
+  }
   if ("year" in displayQuote) {
     arrayDisplay += "<span class='year'>Year: " + displayQuote.year + "</span>";
-  } 
+  }
   if ("tag" in displayQuote) {
     arrayDisplay += "<span class='tag'>Tag: " + displayQuote.tag + "</span></p>";
   }
-  document.getElementById("quote-box").innerHTML=arrayDisplay;
+  document.getElementById("quote-box").innerHTML = arrayDisplay;
 }
 
 
