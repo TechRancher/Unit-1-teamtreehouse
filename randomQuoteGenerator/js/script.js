@@ -26,11 +26,11 @@ let quotes = [
     tag: "Success, Goals"
   },
   {
-    quote: "Everything that’s really worthwhile in life came to us free; our mind, our soul, our body, our hopes, our dreams, our ambitions, our intelligence, our love of family and children and friends. All these priceless possessions are free, but the things that cost us money are actually very cheap and can be replaced at any time.",
-    source: "Earl Nightingale",
-    citation: "The Strangest Secret",
-    year: 1976,
-    tag: "Success, Priceless"
+    quote: "I've failed over and over and over again in my life and that is why I succeed.",
+    source: "Michael Jordan",
+    citation: "'Failure', a Nike TV Commercial",
+    year: 1997,
+    tag: "Success"
   },
   {
     quote: "I have seen the science I worshiped, and the aircraft I loved, destroying the civilization I expected them to serve.",
@@ -79,6 +79,14 @@ let quotes = [
   }
 ]
 
+// Setting varible to run timer
+let timer = setInterval(runTimer, 15000);
+
+// This function runs the setInterval and calls on printQuote to call on a random quote to be displayed to index.html
+function runTimer() {
+  printQuote();
+}
+
 
 // Create the getRandomQuote function and name it getRandomQuote
 // This function returns a random quote to be used to be displayed
@@ -120,7 +128,6 @@ function printQuote() {
     arrayDisplay += "<span class='tag'>Tag: " + displayQuote.tag + "</span></p>";
   }
   document.getElementById("quote-box").innerHTML=arrayDisplay;
-  setInterval(printQuote, 30000);
 }
 
 
