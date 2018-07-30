@@ -7,7 +7,7 @@ This is a random quote generator that will display quotes to the index.html file
 */
 
 // The object array which holds the quotes to be randomly used in this program.
-let quotes = [
+const quotes = [
   {
     quote: "Learn to enjoy every minute of your life. Be happy now. Don't wait for something outside of yourself to make you happy in the future. Think how really precious is the time you have to spend, whether it's at work or with your family. Every minute should be enjoyed and savored.",
     source: '"Earl Nightingale"',
