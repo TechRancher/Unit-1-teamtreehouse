@@ -99,7 +99,7 @@ function getRandomBackgroundColor() {
   let x = Math.floor(Math.random() * 256);
   let y = Math.floor(Math.random() * 256);
   let z = Math.floor(Math.random() * 190);
-  let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  let bgColor = `rgb(${x}, ${y}, ${z})`;
   document.getElementById("loadQuote").style.backgroundColor = bgColor;
   document.body.style.backgroundColor = bgColor;
 }
@@ -113,19 +113,18 @@ function printQuote() {
   getRandomBackgroundColor();
   let displayQuote = getRandomQuote(quotes);
   let arrayDisplay = "";
-  arrayDisplay += "<p class='quote'>" + displayQuote.quote + "</p>";
-  arrayDisplay += "<p class='source'>Source: " + displayQuote.source;
+  arrayDisplay += `<p class='quote'>${displayQuote.quote}</p><p class='source'>Source: ${displayQuote.source}`;
   if ("character" in displayQuote) {
-    arrayDisplay += "<span class='character'>Character: " + displayQuote.character + "</span>";
+    arrayDisplay += `<span class='character'>Character: ${displayQuote.character}</span>`;
   }
   if ("citation" in displayQuote) {
-    arrayDisplay += "<span class='citation'>Citation: " + displayQuote.citation + "</span>";
+    arrayDisplay += `<span class='citation'>Citation: ${displayQuote.citation}</span>`;
   }
   if ("year" in displayQuote) {
-    arrayDisplay += "<span class='year'>Year: " + displayQuote.year + "</span>";
+    arrayDisplay += `<span class='year'>Year: ${displayQuote.year}</span>`;
   }
   if ("tag" in displayQuote) {
-    arrayDisplay += "<span class='tag'>Tag: " + displayQuote.tag + "</span></p>";
+    arrayDisplay += `<span class='tag'>Tag: ${displayQuote.tag}</span></p>`;
   }
   document.getElementById("quote-box").innerHTML = arrayDisplay;
 }
