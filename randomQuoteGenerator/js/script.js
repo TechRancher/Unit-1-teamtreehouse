@@ -90,12 +90,12 @@ function runTimer() {
 
 // Create the getRandomQuote function and name it getRandomQuote
 // This function returns a random quote to be used to be displayed
-function getRandomQuote(array) {
+const getRandomQuote = (array) => {
   return array[Math.floor(Math.random() * quotes.length)];
 }
 
 // This function is used to make a random background color including the button background color.
-function getRandomBackgroundColor() {
+const getRandomBackgroundColor = () => {
   let x = Math.floor(Math.random() * 256);
   let y = Math.floor(Math.random() * 256);
   let z = Math.floor(Math.random() * 190);
